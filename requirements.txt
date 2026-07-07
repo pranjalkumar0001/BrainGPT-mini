@@ -1,0 +1,9 @@
+torch>=2.0
+numpy
+scipy
+matplotlib
+mne              # EEG loading/preprocessing, same as your EEGNet project
+scikit-learn     # linear probe (logistic regression)
+tqdm
+einops           # optional, useful if you implement attention via einsum
+jupyter

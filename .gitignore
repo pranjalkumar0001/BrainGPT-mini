@@ -1,0 +1,13 @@
+# data & checkpoints 
+data/
+checkpoints/
+*.pt
+*.pth
+*.npy
+*.npz
+
+__pycache__/
+*.pyc
+.DS_Store
+test1.py
+.vscode
