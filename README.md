@@ -39,7 +39,7 @@ Data: PhysioNet EEG Motor Movement/Imagery Dataset — download instructions TBD
 
 ## Design decisions (filled in as I go)
 
-- **Tokenization scheme:** TBD — patch size / discretization choice, with justification.
+- **Tokenization scheme:** each subject's continuous recording concatenates 6 runs; patch tokenization can produce up to 5 boundary-straddling patches per subject out of ~[X] total (~0.1%), left uncorrected as negligible.
 - **Model size:** TBD — layer count, head count, embedding dim.
 - **Evaluation protocol:** LOSO cross-subject, matching EEGNet baseline for apples-to-apples comparison.
 
