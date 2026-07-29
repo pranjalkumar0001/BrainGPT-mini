@@ -75,8 +75,11 @@ def get_filtered_data(subjects, runs, event_dict, tmin, tmax, data_type, tag):
             print(f"[skip] subject {sub}: {e}")
             continue
 
+        epoch_arr = np.concatenate(sub_epochs, axis=0)
+        epoch_arr = epoch_arr.astype(np.float32)
+
         filtered_dict[f"s{sub:03}"] = {
-            "epochs": np.concatenate(sub_epochs, axis=0),
+            "epochs": epoch_arr,
             "labels": np.concatenate(sub_labels, axis=0),
             "run_id": np.concatenate(sub_run_ids, axis=0),
             "data_type": data_type,
